@@ -36,6 +36,20 @@ async def open(message: Message) -> None:
     )
     await message.answer(text='Start', reply_markup=markup)
 
+@dp.message(Command('open'))
+async def open(message: Message) -> None:
+    markup = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://www.google.com')
+                )
+            ]
+        ]
+    )
+    await message.answer(text='Start', reply_markup=markup)
+
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
