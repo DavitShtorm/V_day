@@ -1,4 +1,4 @@
-document.body.style.transform = "scale(0.4)";  // Extreme zoom out
+document.body.style.transform = "scale(0.3)";  // Extreme zoom out
 document.body.style.transformOrigin = "center"; // Centering the scaling effect
 
 // Centering using flexbox (best approach)
