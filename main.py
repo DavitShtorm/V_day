@@ -39,15 +39,15 @@ async def open(message: Message) -> None:
                 #     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/blueheart/index.html')
                 # ),
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'firework', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/firework/index.html')
                 ),
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'heart laser', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartslaser/index.html')
                 ),
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'electro1', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/electro1/index.html')
                 )             
             ]
@@ -57,15 +57,15 @@ async def open(message: Message) -> None:
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'pulse❤️', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/pulse/index.html')
                 ),
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'love you spin', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyouspin/index.html')
                 ),
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'heart beat', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartbeat/index.html')
                 )
             ]
@@ -75,12 +75,12 @@ async def open(message: Message) -> None:
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'hearts', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/hearts/index.html')
                 ),
                 
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'love', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/love/index.html')
                 )
             ]
@@ -90,12 +90,12 @@ async def open(message: Message) -> None:
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'electro2', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/electro2/index.html')
                 ),
                 
                 InlineKeyboardButton(
-                    text = 'open', 
+                    text = 'love you', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyou/index.html')
                 ),
             ]
