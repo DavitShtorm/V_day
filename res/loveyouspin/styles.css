@@ -1,5 +1,5 @@
 html {
-  transform: scale(0.8); /* Adjust for extreme zoom-out */
+  transform: scale(0.75); /* Adjust for extreme zoom-out */
   transform-origin: top left;
 }
 
