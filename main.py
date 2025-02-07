@@ -24,32 +24,78 @@ async def command_start_handler(message: Message) -> None:
 
 @dp.message(Command('open'))
 async def open(message: Message) -> None:
-    markup = InlineKeyboardMarkup(
+    markup1 = InlineKeyboardMarkup(
         inline_keyboard=[
             [
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://www.google.com')
-                )
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/blueheart/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/electro1/index.html')
+                )             
             ]
         ]
     )
-    await message.answer(text='Start', reply_markup=markup)
-
-@dp.message(Command('open'))
-async def open(message: Message) -> None:
-    markup = InlineKeyboardMarkup(
+    markup2 = InlineKeyboardMarkup(
         inline_keyboard=[
             [
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://www.google.com')
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyou/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyouspin/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/pulse/index.html')
                 )
             ]
         ]
     )
-    await message.answer(text='Start', reply_markup=markup)
-
+    markup3 = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/hearts/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartslaser/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/love/index.html')
+                )
+            ]
+        ]
+    )
+    markup4 = InlineKeyboardMarkup(
+        inline_keyboard=[
+            [
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/electro2/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/firework/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartbeat/index.html')
+                ) 
+            ]
+        ]
+    )
+    await message.answer(text='1', reply_markup=markup1)
+    await message.answer(text='2', reply_markup=markup2)
+    await message.answer(text='3', reply_markup=markup3)
+    await message.answer(text='4', reply_markup=markup4)
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
