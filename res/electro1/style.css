@@ -1,9 +1,3 @@
-html {
-  transform: scale(0.1); /* Adjust for extreme zoom-out */
-  transform-origin: top-left;
-  width: 1000%; /* Prevents content from shrinking */
-}
-
 canvas {
     position: absolute;
     left:0;

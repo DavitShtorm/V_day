@@ -1,3 +1,5 @@
+document.body.style.width = window.innerWidth * 10 + "px"; // Makes everything smaller
+
 window.requestAnimationFrame =
     window.__requestAnimationFrame ||
         window.requestAnimationFrame ||
