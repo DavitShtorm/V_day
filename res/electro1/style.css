@@ -1,8 +1,14 @@
+html {
+  transform: scale(0.1); /* Adjust for extreme zoom-out */
+  transform-origin: top-left;
+  width: 1000%; /* Prevents content from shrinking */
+}
+
 canvas {
     position: absolute;
     left:0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.2);
+    background-color: rgba(0, 0, 0, 0);
   }
