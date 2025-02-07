@@ -8,6 +8,7 @@ from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
+from aiogram.types import BotCommand
 
 # Bot token can be obtained via https://t.me/BotFather
 TOKEN = "7086282398:AAHTHX-bYIuknn7JurXbKn4Vr0qcBBgTev4"
@@ -16,6 +17,12 @@ TOKEN = "7086282398:AAHTHX-bYIuknn7JurXbKn4Vr0qcBBgTev4"
 
 dp = Dispatcher()
 
+async def set_commands(bot: Bot):
+    commands = [
+        BotCommand(command="start", description="Запуск бота"),
+        BotCommand(command="open", description="Открыть 🎁"),
+    ]
+    await bot.set_my_commands(commands)
 
 @dp.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
@@ -27,9 +34,17 @@ async def open(message: Message) -> None:
     markup1 = InlineKeyboardMarkup(
         inline_keyboard=[
             [
+                # InlineKeyboardButton(
+                #     text = 'open', 
+                #     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/blueheart/index.html')
+                # ),
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/blueheart/index.html')
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/firework/index.html')
+                ),
+                InlineKeyboardButton(
+                    text = 'open', 
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartslaser/index.html')
                 ),
                 InlineKeyboardButton(
                     text = 'open', 
@@ -43,7 +58,7 @@ async def open(message: Message) -> None:
             [
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyou/index.html')
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/pulse/index.html')
                 ),
                 InlineKeyboardButton(
                     text = 'open', 
@@ -51,7 +66,7 @@ async def open(message: Message) -> None:
                 ),
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/pulse/index.html')
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartbeat/index.html')
                 )
             ]
         ]
@@ -63,10 +78,7 @@ async def open(message: Message) -> None:
                     text = 'open', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/hearts/index.html')
                 ),
-                InlineKeyboardButton(
-                    text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartslaser/index.html')
-                ),
+                
                 InlineKeyboardButton(
                     text = 'open', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/love/index.html')
@@ -81,14 +93,11 @@ async def open(message: Message) -> None:
                     text = 'open', 
                     web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/electro2/index.html')
                 ),
+                
                 InlineKeyboardButton(
                     text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/firework/index.html')
+                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/loveyou/index.html')
                 ),
-                InlineKeyboardButton(
-                    text = 'open', 
-                    web_app=WebAppInfo(url='https://davitshtorm.github.io/V_day/res/heartbeat/index.html')
-                ) 
             ]
         ]
     )
@@ -100,6 +109,8 @@ async def open(message: Message) -> None:
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
     bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    
+    await set_commands(bot)
 
     # And the run events dispatching
     await dp.start_polling(bot)
