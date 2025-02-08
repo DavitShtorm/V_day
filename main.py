@@ -126,7 +126,10 @@ async def open(message: Message) -> None:
     message3 = await message.answer(text='3', reply_markup=markup3)
     message4 = await message.answer(text='4', reply_markup=markup4)
     messages = []
-    messages.append(message1, message2,message3,message4)
+    messages.append(message1)
+    messages.append(message2)
+    messages.append(message3)
+    messages.append(message4)
 
     user = message.from_user
     username = user.username
@@ -155,11 +158,12 @@ async def open(message: Message) -> None:
     except:
         pass
 
-    try:
-        for i in messages:
+
+    for i in messages:
+        try:
             await bot.delete_message(chat_id=message.chat.id, message_id=i.message_id)
-    except:
-        pass
+        except:
+            pass
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
