@@ -1,9 +1,3 @@
-html {
-  transform: scale(0.75); /* Adjust for extreme zoom-out */
-  transform-origin: top left;
-}
-
-
 #btn-make {
   bottom: 200px;
   right: 30px;
