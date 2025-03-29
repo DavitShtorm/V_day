@@ -8,7 +8,6 @@ from aiogram.enums import ParseMode
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, WebAppInfo
 from aiogram.types import BotCommand
-from aiogram.client.session.aiohttp import AiohttpSession
 
 # Bot token can be obtained via https://t.me/BotFather
 TOKEN = "8157945109:AAHR-PwqW6BkcEKk3C4nTgI26R0MHvU0PwE"
@@ -132,9 +131,8 @@ async def open(message: Message) -> None:
 
 async def main() -> None:
     # Initialize Bot instance with default bot properties which will be passed to all API calls
-    session = AiohttpSession(proxy="http://proxy.server:3128")
     global bot
-    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML), session=session)
+    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     await set_commands(bot)
 
     # And the run events dispatching
